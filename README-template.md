@@ -49,6 +49,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Setup sass
 - Add colors and font/font-sizes to css.
 - Add all elements in html and link up css
+- Use css grid to set up desktop version layout!
 
 ### Built with
 

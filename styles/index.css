@@ -3,6 +3,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 0.9375rem;
   font-family: "Poppins";
+}
+
+.main-container .cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }/*# sourceMappingURL=index.css.map */
