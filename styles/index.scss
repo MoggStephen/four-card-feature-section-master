@@ -16,15 +16,117 @@ $weightMedium: 400;
 $weightLarge: 600;
 
 *{
+    /*BOILERPLATE STYLES*/
     margin: 0;
     padding:0;
     box-sizing: border-box;
     font-family: $defaultFamily;
 }
+body{
+    background-color: $veryLightGray;
+}
 
+/*HEADER CONTAINER*/
+.header-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem 0 4rem 0;
+    color: $veryDarkBlue;
+    text-align: center;
+
+    .header-item{
+        width: 32rem;
+    }
+    .header-h1{
+        font-size: 2.4rem;
+        margin: 0 0 1rem 0;
+        .unbold{
+            font-weight: $weightSmall;
+        }
+    }
+    .header-p{
+        font-weight: $weightMedium;
+        color: $grayishBlue;
+    }
+}
+
+/*MAIN CONTAINER*/
 .main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .cards-container{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        display: flex;
+        align-items: center;
+        
+        .side-cards-container{          
+            /*SIDE CARDS*/
+            .supervisor{
+                border-top: 4px solid $cyan;
+            }
+            .calculator{
+                border-top: 4px solid $blue;
+            }
+        }
+        .middle-cards-container{
+            /*MIDDLE CARDS*/
+            display: flex;
+            flex-direction: column;
+            .team-builder{
+                border-top: 4px solid $red;
+            }
+            .karma{
+                border-top: 4px solid $orange;
+            }
+        }
+        .side-cards-container .card, .middle-cards-container .card{
+            /*ALL CARD STYLES*/
+            display: flex;
+            flex-direction: column;
+            box-shadow: 5px 5px 10px $grayishBlue;
+            margin: 0.75rem;
+            padding: 1.75rem;
+            width: 21.875rem;
+            height: 15.625rem;
+            border-radius: 0.25rem;
+            background: white;
+            .card-h2{
+                font-weight: $weightLarge;
+                font-size: 1.25rem;
+                color: $veryDarkBlue;
+            }
+            .card-p{
+                font-weight: $weightMedium;
+                color: $grayishBlue;
+                font-size: 0.8rem;
+            }
+            .card-img{
+                align-self: flex-end;
+                margin-top: auto;
+            }
+        }
+    }
+}
+
+/*MEDIA QUERY - USES MAX-WIDTH AS WE DID DESKTOP FIRST*/
+@media (max-width: 1100px){
+    .header-container{
+        .header-item{
+            width: 20rem;
+        }
+        .header-h1{
+            font-size: 1.5rem;
+        }
+    }
+    .main-container{
+        margin-bottom: 3rem;
+        .cards-container{
+            flex-direction: column;
+            .side-cards-container .card, .middle-cards-container .card{
+                width: 19.375rem;
+            }
+        }
     }
 }

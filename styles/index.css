@@ -1,12 +1,113 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,400,600");
 * {
+  /*BOILERPLATE STYLES*/
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins";
 }
 
+body {
+  background-color: hsl(0, 0%, 98%);
+}
+
+/*HEADER CONTAINER*/
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5rem 0 4rem 0;
+  color: hsl(234, 12%, 34%);
+  text-align: center;
+}
+.header-container .header-item {
+  width: 32rem;
+}
+.header-container .header-h1 {
+  font-size: 2.4rem;
+  margin: 0 0 1rem 0;
+}
+.header-container .header-h1 .unbold {
+  font-weight: 200;
+}
+.header-container .header-p {
+  font-weight: 400;
+  color: hsl(229, 6%, 66%);
+}
+
+/*MAIN CONTAINER*/
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .main-container .cards-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  align-items: center;
+}
+.main-container .cards-container .side-cards-container {
+  /*SIDE CARDS*/
+}
+.main-container .cards-container .side-cards-container .supervisor {
+  border-top: 4px solid hsl(180, 62%, 55%);
+}
+.main-container .cards-container .side-cards-container .calculator {
+  border-top: 4px solid hsl(212, 86%, 64%);
+}
+.main-container .cards-container .middle-cards-container {
+  /*MIDDLE CARDS*/
+  display: flex;
+  flex-direction: column;
+}
+.main-container .cards-container .middle-cards-container .team-builder {
+  border-top: 4px solid hsl(0, 78%, 62%);
+}
+.main-container .cards-container .middle-cards-container .karma {
+  border-top: 4px solid hsl(34, 97%, 64%);
+}
+.main-container .cards-container .side-cards-container .card, .main-container .cards-container .middle-cards-container .card {
+  /*ALL CARD STYLES*/
+  display: flex;
+  flex-direction: column;
+  box-shadow: 5px 5px 10px hsl(229, 6%, 66%);
+  margin: 0.75rem;
+  padding: 1.75rem;
+  width: 21.875rem;
+  height: 15.625rem;
+  border-radius: 0.25rem;
+  background: white;
+}
+.main-container .cards-container .side-cards-container .card .card-h2, .main-container .cards-container .middle-cards-container .card .card-h2 {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: hsl(234, 12%, 34%);
+}
+.main-container .cards-container .side-cards-container .card .card-p, .main-container .cards-container .middle-cards-container .card .card-p {
+  font-weight: 400;
+  color: hsl(229, 6%, 66%);
+  font-size: 0.8rem;
+}
+.main-container .cards-container .side-cards-container .card .card-img, .main-container .cards-container .middle-cards-container .card .card-img {
+  align-self: flex-end;
+  margin-top: auto;
+}
+
+/*MEDIA QUERY - USES MAX-WIDTH AS WE DID DESKTOP FIRST*/
+@media (max-width: 1100px) {
+  .header-container .header-item {
+    width: 20rem;
+  }
+  .header-container .header-h1 {
+    font-size: 1.5rem;
+  }
+  .main-container {
+    margin-bottom: 3rem;
+  }
+  .main-container .cards-container {
+    flex-direction: column;
+  }
+  .main-container .cards-container .side-cards-container .card, .main-container .cards-container .middle-cards-container .card {
+    width: 19.375rem;
+  }
 }/*# sourceMappingURL=index.css.map */
